@@ -1,28 +1,37 @@
+require_relative 'SelectionSort.rb'
+describe SelectionSort do
 
-describe BubbleSort do
-
-  let(:bubblesort) { BubbleSort.new}
-  it " should return the same array if the array is already sorted" do
-   expect(bubblesort.sort([0,1])).to eq([0,1])
- end
-
-  it "takes an unsorted array of two elements and returns it   sorted" do
-   expect(bubblesort.sort([3, 2])).to eq([2,3])
+  it 'returns an empty list' do
+    expect(described_class.sort([])).to eq([])
   end
 
-  it "takes an unsorted array of two different elements and returns it sorted" do
-   expect(bubblesort.sort([2, 1])).to eq([1,2])
+  it 'returns a list with one item' do
+    expect(described_class.sort([1])).to eq([1])
   end
 
-  it "takes an unsorted array of three different elements and returns it sorted" do
-   expect(bubblesort.sort([3,1,2])).to eq([1,2,3])
+  it 'sorts a list with two items' do
+    expect(described_class.sort([2,1])).to eq([1,2])
   end
 
-  it "takes a descending order array and makes it ascending order" do
-    expect(bubblesort.sort([5, 4, 3, 2, 1])).to eq([1, 2, 3, 4, 5])
+  it 'sorts a list with two items' do
+    expect(described_class.sort([3,1])).to eq([1,3])
   end
+
+
+  
 end
 
 
- 
+
+
+
+
+
+# it 'returns an empty list'
+# it 'returns a list with one item'
+# it 'sorts a list with two items'
+# it 'sorts a list with three items'
+# it 'sorts a list with four items'
+
+
 
